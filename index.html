@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jan Marc</title>
+
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
+
+		<nav class="nav-bar">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#aboutme">About me</a></li>
+				<li><a href="#hobbies">Hobbies</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="home">
+		<div id="image">
+			<img src="images/image-1.jpg" alt="Jan Marc's Image">
+		</div>
+
+		<div id="intro">			
+			<h2 class="align-left"><i> "there is no </i></h2>
+			<h1 class="math-word">MATH</h1>
+			<h2 class="align-right"> <i>in Information <span>Technology Program </span>"</i></h2>
+			<p class="align-right author"><i>-unknown</i></p>
+		</div>
+	</div>
+
+	<div class="divider-line">
+		<hr>
+	</div>
+
+	<div id="aboutme" class="pad">
+		<h2 class="section-title">About Myself</h2>
+		<div id="divider">
+			<div class="aboutme-container">
+				<img src="images/eggshape-image.png" alt="eggshape" class="aboutme-img center">
+				<p>Hello there! My name is <strong>Jan Marc G. Serdeña</strong></p>
+				<P>you may call me by my nickname: "Jeh Ehm"</P>
+			</div>
+	
+			<div class="aboutme-container">
+				<img src="images/batstate-u-img.png" alt="Batangas State University icon" class="aboutme-img mid-center">
+				<p>I am currently a third year student at Batangas State University.</p>
+				<p>Taking the program Bachelor of Science in Information Technology.</p>
+			</div>
+		</div>
+
+		<div id="qoute">
+			<div class="aboutme-container">
+				<p>"Success is not final, failure is not fatal: it is the courage to continue that counts."</p>
+				<p><i> —Winston Churchill</i></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="divider-line">
+		<hr>
+	</div>
+	
+	<div id="hobbies" class="pad">
+		<h2 class="section-title">Hobbies</h2>
+		<div class="hobbies-row">
+			<img src="images/sleep.png" alt="Sleep" class="img left bot-margin">
+			<div class="pad-top-40 justify">
+				<h3>Sleeping</h3>
+				<p>I prefer to sleep than to go outside most of the time. I don't know why I like to sleep but yeah, I found myself most of the time dozing off..</p>
+			</div>
+		</div>
+
+		<div class="hobbies-row"> 
+			<img src="images/game-icon.png" alt="Game" class="img right bot-margin">
+			<div class="pad-top-40 text-right justify">	
+				<h3>Playing online games</h3>
+				<p>It is one of my hobbies that I want to continue but sadly my machine cannot keep up with the requirements of the games I want to play.</p>
+			</div>		
+		</div>
+
+		<div class="hobbies-row">
+			<img src="images/book-icon.png" alt="Books" class="img left bot-margin">
+			<div class="pad-top-20 justify">
+				<h3>Reading Comics</h3>
+				<p>I mostly read manwahs (Korean), mangas (Japanese), and sometimes manhuas (Chinese) version of comics. I think this one is what I always do when someone recommends me a good title</p>
+			</div>			
+		</div>
+
+		<div class="hobbies-row">
+			<img src="images/film-icon.png" alt="Film" class="img right bot-margin">
+			<div class="pad-top-20 text-right justify">
+				<h3>Watching Documentaries</h3>
+				<p>The most entertaning videos for me is watching documentaries. When it comes to documentaries I like it being for its true-to-life. Furthermore, I get lessons from watching it.</p>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>All Rights Reserved © Jeh Ehm</p>
+	</footer>
+
+	<script>
+		hamburger = document.querySelector('.hamburger');
+		hamburger.onclick = function(){
+			navBar = document.querySelector('.nav-bar');
+			navBar.classList.toggle('active');
+		}
+
+		link = document.querySelector('ul');
+		link.onclick = function(){
+			navBar = document.querySelector('.nav-bar');
+			navBar.classList.toggle('active');
+		}
+
+		$(document).ready(function(){
+		// Add smooth scrolling to all links
+			$("a").on('click', function(event) {
+
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+				// Prevent default anchor click behavior
+				event.preventDefault();
+
+				// Store hash
+				var hash = this.hash;
+
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 1000, function(){
+
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				});
+				} // End if
+			});
+		});
+	</script>
+</body>
+</html>

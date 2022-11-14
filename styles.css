@@ -316,7 +316,7 @@ footer {
 	}
 
 	.nav-bar.active {
-		height: 100vh;
+		height: 100%;
 	}
 
 	.nav-bar ul {
